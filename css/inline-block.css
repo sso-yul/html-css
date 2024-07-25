@@ -1,0 +1,54 @@
+.box {
+    /* display: block;
+        div, p, h1,2,3,...은 이 속성을 이미 가지고 있어서 생략 가능
+        display: block; 은 가로행을 전부 차지해달라는 소리
+    */
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    background-color: rgb(220, 231, 255);
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 10px 10px blue;
+}
+
+.container {
+    width: 800px;
+}
+
+.header {
+    background-color: aquamarine;
+    width: 100%;
+    height: 50px;
+}
+
+/*
+    inline-block은 div끼리 옆에 바짝 붙여야 함...
+    해결 1: div사이에 주석 처리 후
+           vertical-align: top;으로 줌
+
+    해결 2: 부모 태그에 font-size: 0px;
+           부모로부터 상속되는 속성은 중요도가 가장 낮음
+*/
+
+.left-menu {
+    background-color: cornflowerblue;
+    width: 20%;
+    height: 400px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right {
+    background-color: coral;
+    width: 80%;
+    height: 400px;
+    display: inline-block;
+}
+
+.footer {
+    background-color: gray;
+    width: 100%;
+    height: 100px;
+}
