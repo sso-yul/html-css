@@ -1,0 +1,79 @@
+body {
+    margin: 0px;
+}
+
+div {
+    /*
+        브라우저 호환성 검색어: nomalize.css
+        https://github.com/necolas/normalize.css/blob/master/normalize.css
+        box-sizing: border-box;
+        이걸 써야 패딩 및 보더 포함 영역도 컨텐츠 영역으로 가서
+        크기 변화 일어나지 않음
+    */
+    box-sizing: border-box;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../image/shoes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1px;
+    text-align: center;
+    position: relative;
+}
+
+.main-title {
+    color: white;
+    font-size: 40px;
+}
+
+.main-content {
+    color: white;
+    font-size: 17px;
+}
+
+.main-button {
+    padding: 15px 25px 15px 25px;
+    font-size: 15px;
+    background-color: white;
+    border: none;
+    /*
+        position 속성
+        1. 좌표이동 가능
+        2. 공중에 뜸
+
+        relative: 내 원래 위치 기준
+        fixed: 화면이 어찌 되었든 그자리에 고정
+        static: 아~무 움직임도 없어라
+        absolute: relative를 가진 부모 태그 기준으로 적용
+
+        position: absolute; 를 가운데 정렬 시키려면 아래와 같이 하면 됨
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: (적절한 너비)px;
+        */
+    /* z-index가 높을수록 앞으로 낮을수록 뒤로 감 */
+    position: relative; /* 내 원래 위치를 기준으로 이동하라 */
+}
+
+.main-box {
+    position: relative;
+    background-color: rgb(240, 240, 240);
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    top: -40px;
+    text-align: center;
+    margin: auto;
+}
+
+input[type=text] {
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
